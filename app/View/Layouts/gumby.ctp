@@ -35,10 +35,10 @@
 
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 			 However, there is a blank style.css in the css directory should you prefer -->
-	<link rel="stylesheet" href="/css/gumby.css">
+	<link rel="stylesheet" href="css/gumby.css">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 
-	<script src="/js/libs/modernizr-2.6.2.min.js"></script>
+	<script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
 
 <style>
@@ -58,26 +58,17 @@ echo $this->fetch('script');
 <body>
 
 
-
 	<div class="navbar" id="nav1">
 		<div class="row">
 			<a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
 			<h1 class="four columns logo">
 				<a href="#">
-					<img src="/img/gumby_mainlogo.png" gumby-retina />
+					<img src="img/gumby_mainlogo.png" gumby-retina />
 				</a>
 			</h1>
 			<ul class="eight columns">
-				<li><a href="/pool_games">Pool</a></li>
-				<li><a href="/users">Users</a></li>
-				<li>
-					<a href="#">Help</a>
-					<div class="dropdown">
-						<ul>
-							<li><a href="#">What is this?</a></li>
-						</ul>
-					</div>
-				</li>
+				<li><?php echo $this->Html->link('Pool Games',array('controller'=>'pool_games','action'=>'index'); ?></li>
+				<li><a href="#">Customize</a></li>
 				<li class="field"><input class="search input" type="search" placeholder="Search" /></li>
 			</ul>
 		</div>
@@ -91,27 +82,27 @@ echo $this->fetch('script');
 
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 
 
   <!--
   Include gumby.js followed by UI modules.
   Or concatenate and minify into a single file
-  <script src="/js/libs/gumby.js"></script>
-  <script src="/js/libs/ui/gumby.retina.js"></script>
-  <script src="/js/libs/ui/gumby.fixed.js"></script>
-  <script src="/js/libs/ui/gumby.skiplink.js"></script>
-  <script src="/js/libs/ui/gumby.toggleswitch.js"></script>
-  <script src="/js/libs/ui/gumby.checkbox.js"></script>
-  <script src="/js/libs/ui/gumby.radiobtn.js"></script>
-  <script src="/js/libs/ui/gumby.tabs.js"></script>
-  <script src="/js/libs/ui/gumby.navbar.js"></script>
-  <script src="/js/libs/ui/jquery.validation.js"></script>
-  <script src="/js/libs/gumby.init.js"></script>-->
+  <script src="js/libs/gumby.js"></script>
+  <script src="js/libs/ui/gumby.retina.js"></script>
+  <script src="js/libs/ui/gumby.fixed.js"></script>
+  <script src="js/libs/ui/gumby.skiplink.js"></script>
+  <script src="js/libs/ui/gumby.toggleswitch.js"></script>
+  <script src="js/libs/ui/gumby.checkbox.js"></script>
+  <script src="js/libs/ui/gumby.radiobtn.js"></script>
+  <script src="js/libs/ui/gumby.tabs.js"></script>
+  <script src="js/libs/ui/gumby.navbar.js"></script>
+  <script src="js/libs/ui/jquery.validation.js"></script>
+  <script src="js/libs/gumby.init.js"></script>-->
   
-  <script src="/js/libs/gumby.min.js"></script>
-  <script src="/js/plugins.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="js/libs/gumby.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <!--<script>
