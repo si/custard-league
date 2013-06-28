@@ -12,7 +12,7 @@ $this->pageTitle = 'Pool Games';
 foreach($poolGames as $game) :
 ?>
 <tr>
-	<td><?php echo $this->Time->niceShort($game['PoolGame']['created']); ?></td>
+	<td><?php echo $this->Html->link($this->Time->niceShort($game['PoolGame']['created']),array('action'=>'view',$game['PoolGame']['id'])); ?></td>
 	<td><?php echo (($game['PoolGame']['winner']==$game['PoolGame']['player_1']) ? '<strong>' : '') . $game['Player1']['first_name'] . (($game['PoolGame']['winner']==$game['PoolGame']['player_1']) ? '</strong>' : ''); ?></td>
 	<td><?php echo (($game['PoolGame']['winner']==$game['PoolGame']['player_2']) ? '<strong>' : '') . $game['Player2']['first_name'] . (($game['PoolGame']['winner']==$game['PoolGame']['player_2']) ? '</strong>' : ''); ?></td>
 </tr>
