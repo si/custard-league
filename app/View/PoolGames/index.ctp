@@ -6,7 +6,42 @@ $this->pageTitle = 'Pool Games';
 //var_dump($poolGames);
 ?>
 <div class="medium primary btn"><?php echo $this->Html->link('New Game',array('action'=>'add')); ?></div>
+
+<?php
+if (isset($rankings)) : 
+?>
+<h2>Pool Rankings</h2>
 <table>
+<thead>
+<tr>
+<th>Player</th>
+<th>Wins</th>
+</tr>
+</thead>
+<tbody>
+<?php
+foreach($rankings as $game) :
+?>
+<tr>
+	<td><?php echo $game['Winner']['first_name']; ?></td><td><?php echo $game[0]['wins']; ?></td>
+</tr>
+<?php
+endforeach;
+?>
+</tbody>
+</table>
+<?php endif; ?>
+
+<?php if (isset($poolGames)) : ?>
+<h2>Last 10 Games</h2>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Player 1</th>
+<th>Player 2</th>
+</tr>
+</thead>
 <tbody>
 <?php
 foreach($poolGames as $game) :
@@ -19,5 +54,7 @@ foreach($poolGames as $game) :
 <?php
 endforeach;
 ?>
+
 </tbody>
 </table>
+<?php endif; ?>
