@@ -12,4 +12,12 @@ class User extends AppModel {
             'foreignKey' => 'winner',
         ),
     );
+
+    public $belongsTo = array(
+        'Team' => array(
+            'className'    => 'Team',
+            'foreignKey' => 'team_id',
+        ),
+    );
+
 }
