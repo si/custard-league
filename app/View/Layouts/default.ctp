@@ -69,6 +69,7 @@ echo $this->fetch('script');
 			</h1>
 			<ul class="eight columns">
 				<li><a href="/pool_games">Pool</a></li>
+				<li><a href="/pool_rules">Rules</a></li>
 				<li><a href="/users">Users</a></li>
 				<li>
 					<a href="#">Help</a>
