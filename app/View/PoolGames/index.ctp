@@ -5,7 +5,8 @@ $this->pageTitle = 'Pool Games';
 <?php
 //var_dump($poolGames);
 ?>
-<div class="medium primary btn"><?php echo $this->Html->link('New Game',array('action'=>'add')); ?></div>
+
+<?php echo $this->Html->link('New Game',array('action'=>'add'),array('class'=>'command-button default')); ?>
 
 <?php
 if (isset($rankings)) : 
@@ -14,16 +15,22 @@ if (isset($rankings)) :
 <table>
 <thead>
 <tr>
+<th>Position</th>
 <th>Player</th>
-<th>Wins</th>
+<th>Score</th>
 </tr>
 </thead>
 <tbody>
 <?php
-foreach($rankings as $game) :
+foreach($rankings as $index=>$game) :
 ?>
 <tr>
-	<td><?php echo $game['Winner']['first_name']; ?></td><td><?php echo $game[0]['wins']; ?></td>
+	<td><?php echo $index+1; ?></td>
+	<td><?php echo $game['Winner']['first_name']; ?></td>
+	<td>
+	  <strong><?php echo $this->Number->toPercentage($game[0]['win_ratio']*100,1); ?></strong>
+	  <small>(<?php echo $game[0]['wins'] . '/' . $game[0]['total_played']; ?>)</small>
+	</td>
 </tr>
 <?php
 endforeach;
