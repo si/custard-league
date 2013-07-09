@@ -35,84 +35,81 @@
 
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 			 However, there is a blank style.css in the css directory should you prefer -->
-	<link rel="stylesheet" href="/css/gumby.css">
+	<link rel="stylesheet" href="/css/modern.css">
+		<link href="css/modern-responsive.css" rel="stylesheet">
+
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 
 	<script src="/js/libs/modernizr-2.6.2.min.js"></script>
 </head>
 
-<style>
-	.btn,.drawer { margin-bottom:10px; }
-	.drawer { text-align: center; }
-	h1.lead { border-bottom: 1px dotted #ccc; margin-bottom: 30px; }
-	h4.lead { margin-bottom:10px; }
-	#icon_map ul li { font-size: 16px; }
-	.smallify { font-size: 13px; }
-	.modal h2, .modal .btn { margin: 5% 0 20px; }
-</style>
 <?php
 echo $this->fetch('meta');
 echo $this->fetch('css');
 echo $this->fetch('script');
 ?>
-<body>
+<body class="metrouicss">
 
 
+<div class="page">
+<div class="nav-bar">
+    <div class="nav-bar-inner padding10">
+        <span class="pull-menu"></span>
 
-	<div class="navbar" id="nav1">
-		<div class="row">
-			<a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
-			<h1 class="four columns logo">
-				<a href="#">
-					<img src="/img/gumby_mainlogo.png" gumby-retina />
-				</a>
-			</h1>
-			<ul class="eight columns">
-				<li><a href="/pool_games">Pool</a></li>
-				<li><a href="/pool_rules">Rules</a></li>
-				<li><a href="/users">Users</a></li>
-				<li>
-					<a href="#">Help</a>
-					<div class="dropdown">
-						<ul>
-							<li><a href="#">What is this?</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="field"><input class="search input" type="search" placeholder="Search" /></li>
-			</ul>
-		</div>
-	</div>
+        <a href="/"><span class="element brand">
+            ASOS Hacks <small>0.1</small>
+        </span></a>
 
-	<div class="container">
+        <div class="divider"></div>
+
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li data-role="dropdown">
+                <a href="#">Pool League</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/pool_games/">Dashboard</a></li>
+                    <li><a href="/pool_games/add">New Game</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/pool_rules/">Rules</a></li>
+                </ul>
+            </li>
+            <li data-role="dropdown"><a href="#">Users</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/users/">List</a></li>
+                    <li><a href="/users/add">New User</a></li>
+                </ul>
+            </li>
+
+            <li><a href="https://github.com/olton/Metro-UI-CSS">MetroUI</a></li>
+        </ul>
+
+    </div>
+</div>
+</div>
+
+    <div class="page">
 		<?php echo $this->fetch('content'); ?>
-	</div>
+    </div>
 
 
 
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+    <script type="text/javascript" src="/js/dropdown.js"></script>
+    <script type="text/javascript" src="/js/accordion.js"></script>
+    <script type="text/javascript" src="/js/buttonset.js"></script>
+    <script type="text/javascript" src="/js/carousel.js"></script>
+    <script type="text/javascript" src="/js/input-control.js"></script>
+    <script type="text/javascript" src="/js/pagecontrol.js"></script>
+    <script type="text/javascript" src="/js/rating.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/tile-slider.js"></script>
+    <script type="text/javascript" src="/js/tile-drag.js"></script>
+    <script type="text/javascript" src="/js/calendar.js"></script>
 
 
-  <!--
-  Include gumby.js followed by UI modules.
-  Or concatenate and minify into a single file
-  <script src="/js/libs/gumby.js"></script>
-  <script src="/js/libs/ui/gumby.retina.js"></script>
-  <script src="/js/libs/ui/gumby.fixed.js"></script>
-  <script src="/js/libs/ui/gumby.skiplink.js"></script>
-  <script src="/js/libs/ui/gumby.toggleswitch.js"></script>
-  <script src="/js/libs/ui/gumby.checkbox.js"></script>
-  <script src="/js/libs/ui/gumby.radiobtn.js"></script>
-  <script src="/js/libs/ui/gumby.tabs.js"></script>
-  <script src="/js/libs/ui/gumby.navbar.js"></script>
-  <script src="/js/libs/ui/jquery.validation.js"></script>
-  <script src="/js/libs/gumby.init.js"></script>-->
-  
-  <script src="/js/libs/gumby.min.js"></script>
-  <script src="/js/plugins.js"></script>
-  <script src="/js/main.js"></script>
+
 
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <!--<script>
