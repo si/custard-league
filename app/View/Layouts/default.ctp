@@ -36,7 +36,7 @@
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 			 However, there is a blank style.css in the css directory should you prefer -->
 	<link rel="stylesheet" href="/css/modern.css">
-		<link href="css/modern-responsive.css" rel="stylesheet">
+	<link href="/css/modern-responsive.css" rel="stylesheet">
 
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 
@@ -108,6 +108,7 @@ echo $this->fetch('script');
     <script type="text/javascript" src="/js/tile-drag.js"></script>
     <script type="text/javascript" src="/js/calendar.js"></script>
 
+    <script type="text/javascript" src="/js/app.js"></script>
 
 
 
