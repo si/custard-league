@@ -1,5 +1,5 @@
 <?php
-var_dump($poolGame);
+//var_dump($poolGame);
 
 $this->layout = 'custard';
 
