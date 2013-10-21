@@ -58,7 +58,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => '127.0.0.1',
 		'login' => 'joblin_hacker',
 		'password' => '8OhP(xTvhdBm',
 		'database' => 'joblin_hacks',
