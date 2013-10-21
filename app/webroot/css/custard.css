@@ -51,7 +51,9 @@ header nav li {
 	position: relative;
 }
 header nav ul ul {
-	display: none;
+  clear: left;
+	display: block;
+	font-size: 0.8em;
 }
 header nav ul a:hover ul {
 	display: block;
@@ -59,7 +61,9 @@ header nav ul a:hover ul {
 	top: 2em;
 	height: auto;
 }
-
+main {
+  margin: 5em 0;
+}
 footer {
 	clear: both;
 	text-align: center;
@@ -67,16 +71,30 @@ footer {
 	background: rgba(255,255,255,0.8);
 }
 table {
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.95);
 	margin: 0 0.5em 1em;
 	width: 95%;
+	color: #FFF;
 }
 th, td {
 	padding: 0.5em;
 }
 th {
-	color: rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.3);
 }
+td a:link,
+td a:visited {
+	color: #EEE;
+}
+td a:hover {
+	color: #FFF;
+}
+
+fieldset {
+	background: rgba(255,255,255,0.9);
+	border: 2px dashed #333;
+}
+
 .avatar {
 	display: inline-block;
 	width: 160px;
@@ -112,6 +130,16 @@ a.cta:active {
 	width: 50%;
 }
 
+#rankings .position {
+	font-size: 2em;
+	text-align: center;
+}
+.team-1 {
+	color: #b1dd00;
+}
+.team-2 {
+	color: #eb00e3;
+}
 
 #rankings .score small {
 	display: block;

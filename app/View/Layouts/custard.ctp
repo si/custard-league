@@ -68,6 +68,14 @@ echo $this->fetch('script');
                     <li><a href="/pool_rules/">Rules</a></li>
                 </ul>
             </li>
+            <li>
+                <a href="/fifa_games/">FIFA League</a>
+                <ul>
+                    <li><a href="/fifa_games/add">New Game</a></li>
+                    <li><a href="/fifa_games/">Latest</a></li>
+                    <li><a href="/fifa_games/league">League</a></li>
+                </ul>
+            </li>
             <li><a href="#">Users</a>
                 <ul>
                     <li><a href="/users/">List</a></li>
@@ -80,9 +88,9 @@ echo $this->fetch('script');
 
     </header>
 
-    <div class="content">
+    <main class="content">
 		<?php echo $this->fetch('content'); ?>
-    </div>
+    </main>
 
     <footer>
 
