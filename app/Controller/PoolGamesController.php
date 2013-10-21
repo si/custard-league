@@ -2,16 +2,23 @@
 class PoolGamesController extends AppController {
 
 	var $scaffold;
+	
+	function beforeRender() {
+    parent::beforeRender();
+  }
+
+	function beforeFilter() {
+    parent::beforeFilter();
+  }
 
 	public function index() {
-
-		$this->layout = 'custard';
 
 		$conditions = array();
 
 		$rankings = $this->PoolGame->find('all', array(
 		'fields' => array(
 			'Winner.first_name',
+			'Winner.team_id',
 			'COUNT(winner) wins',
 			'(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id) total_played',
 			'(COUNT(winner)/(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id)) win_ratio'
@@ -56,7 +63,6 @@ class PoolGamesController extends AppController {
 	
 	public function view($id='') {
 
-		$this->layout = 'custard';
 		if($id!='') {
 			$poolGame = $this->PoolGame->findById($id);
 			$this->set('poolGame', $poolGame);
