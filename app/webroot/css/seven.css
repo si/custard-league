@@ -1,0 +1,165 @@
+/* line 1, ../sass/seven.scss */
+body {
+  background: #FFF;
+  color: #333;
+  font-family: 'HelveticaNeue-Light',Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../sass/seven.scss */
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+/* line 16, ../sass/seven.scss */
+table {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 21, ../sass/seven.scss */
+thead {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 26, ../sass/seven.scss */
+th, td {
+  padding: 0.25em 0.5em;
+  text-align: center;
+}
+
+/* line 30, ../sass/seven.scss */
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+/* line 34, ../sass/seven.scss */
+header {
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1em;
+}
+/* line 40, ../sass/seven.scss */
+header .logo {
+  display: block;
+  float: left;
+  width: 100px;
+  padding: 0.75em 0;
+}
+/* line 47, ../sass/seven.scss */
+header nav {
+  float: left;
+}
+/* line 51, ../sass/seven.scss */
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 55, ../sass/seven.scss */
+header nav ul li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 60, ../sass/seven.scss */
+header nav ul li a {
+  background-size: 64px 64px;
+  color: #FFF;
+  display: block;
+  height: 64px;
+  text-indent: -9999px;
+  width: 64px;
+}
+/* line 68, ../sass/seven.scss */
+header nav ul li a:hover {
+  opacity: 0.6;
+}
+/* line 74, ../sass/seven.scss */
+header nav ul li .home > a {
+  background: url(/img/icons/home.png) no-repeat 0 0;
+}
+/* line 78, ../sass/seven.scss */
+header nav ul li .pool > a {
+  background: url(/img/icons/cue-ball.png) no-repeat 0 0;
+}
+/* line 82, ../sass/seven.scss */
+header nav ul li .fifa > a {
+  background: url(/img/icons/football.png) no-repeat 0 0;
+}
+/* line 86, ../sass/seven.scss */
+header nav ul li .users > a {
+  background: url(/img/icons/user.png) no-repeat 0 0;
+}
+
+/* line 97, ../sass/seven.scss */
+footer {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 5em;
+  text-align: center;
+}
+
+/* line 103, ../sass/seven.scss */
+h1 {
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+  font-size: 8em;
+  letter-spacing: 0.1;
+  line-height: 0.8;
+  margin: 0 0 0.2em;
+  padding: 0;
+  text-align: justify;
+  text-transform: uppercase;
+  -webkit-transition: letter-spacing 1s ease;
+  -moz-transition: letter-spacing 1s ease;
+  -o-transition: letter-spacing 1s ease;
+  transition: letter-spacing 1s ease;
+}
+
+/* line 118, ../sass/seven.scss */
+h1:hover {
+  letter-spacing: -0.1em;
+}
+
+/* line 122, ../sass/seven.scss */
+.cta {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 136, ../sass/seven.scss */
+.cta:hover {
+  padding: 0.5em 2em;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 143, ../sass/seven.scss */
+  .home {
+    background-image: url(/img/icons/home@2x.png);
+  }
+
+  /* line 146, ../sass/seven.scss */
+  .pool {
+    background-image: url(/img/icons/cue-ball@2x.png);
+  }
+
+  /* line 149, ../sass/seven.scss */
+  .fifa {
+    background-image: url(/img/icons/football@2x.png);
+  }
+
+  /* line 152, ../sass/seven.scss */
+  .users {
+    background-image: url(/img/icons/user@2x.png);
+  }
+}

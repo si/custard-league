@@ -1,0 +1,155 @@
+body {
+
+  background: #FFF;
+  color: #333;
+  font-family: 'HelveticaNeue-Light',Helvetica,Arial,sans-serif;
+
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+table {
+  background: rgba(255,255,255,0.9);
+  color: rgba(0,0,0,0.8);
+}
+
+thead {
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.2);
+}
+
+th, td {
+  padding: 0.25em 0.5em;
+  text-align: center;
+}
+th:first-child, td:first-child {
+  text-align: left;
+}
+
+header {
+
+  background: rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 1em;
+  
+  .logo {
+    display: block;
+    float: left; 
+    width: 100px;
+    padding: 0.75em 0;
+  }
+
+  nav {
+  
+    float: left;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      
+      li {
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        a {
+          background-size: 64px 64px;
+          color: #FFF;
+          display: block;
+          height: 64px;
+          text-indent: -9999px;
+          width: 64px;
+
+          &:hover {
+            opacity: 0.6;
+          }
+          
+        }
+
+        .home > a {
+          background: url(/img/icons/home.png) no-repeat 0 0;
+        }
+
+        .pool > a {
+          background: url(/img/icons/cue-ball.png) no-repeat 0 0;
+        }
+
+        .fifa > a {
+          background: url(/img/icons/football.png) no-repeat 0 0;
+        }
+
+        .users > a {
+          background: url(/img/icons/user.png) no-repeat 0 0;
+        }
+        
+      }
+    
+    }
+  
+  }
+
+}
+footer {
+  background: rgba(0,0,0,0.05);
+  padding: 5em;
+  text-align: center;
+}
+
+h1 {
+  color: rgba(0,0,0,0.1);
+  font-weight: 900;
+  font-size: 8em;
+  letter-spacing: 0.1;
+  line-height: 0.8;
+  margin: 0 0 0.2em;
+  padding: 0;
+  text-align: justify;
+  text-transform: uppercase;
+  -webkit-transition: letter-spacing 1s ease;
+  -moz-transition: letter-spacing 1s ease;
+  -o-transition: letter-spacing 1s ease;
+  transition: letter-spacing 1s ease;
+}
+h1:hover {
+  letter-spacing: -0.1em;
+}
+
+.cta {
+  background: rgba(0,0,0,0.5);
+  color: #FFF;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.cta:hover {
+  padding: 0.5em 2em;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .home {
+    background-image: url(/img/icons/home@2x.png);
+  }
+  .pool {
+    background-image: url(/img/icons/cue-ball@2x.png);
+  }
+  .fifa {
+    background-image: url(/img/icons/football@2x.png);
+  }
+  .users {
+    background-image: url(/img/icons/user@2x.png);
+  }
+}
