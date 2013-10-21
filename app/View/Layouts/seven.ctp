@@ -13,7 +13,7 @@
 			 More info: h5bp.com/b/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title><?php echo $title_for_layout; ?> - ASOS, Custard Factory</title>
+	<title><?php echo $title_for_layout; ?> - Custard League</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="humans.txt">
@@ -36,7 +36,7 @@
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 			 However, there is a blank style.css in the css directory should you prefer -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:800|Gentium+Book+Basic:400,400italic,700" rel="stylesheet">
-	<link rel="stylesheet" href="/css/typo.css" >
+	<link rel="stylesheet" href="/css/seven.css" >
 
 	<script src="/js/libs/modernizr-2.6.2.min.js"></script>
 </head>
@@ -52,7 +52,7 @@ echo $this->fetch('script');
 
     <header>
         <a href="/" class="logo">
-            Roobarb &amp; Custard 
+            Custard League 
             <small class="version">0.2</small>
         </a>
 

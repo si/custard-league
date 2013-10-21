@@ -1,8 +1,5 @@
 <?php
 //var_dump($poolGame);
-
-$this->layout = 'custard';
-
 if(count($poolGame)>0) :
 ?>
     <h1>

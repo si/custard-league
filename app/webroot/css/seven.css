@@ -62,8 +62,9 @@ header nav ul li {
   float: left;
   margin: 0;
   padding: 0;
+  position: relative;
 }
-/* line 60, ../sass/seven.scss */
+/* line 61, ../sass/seven.scss */
 header nav ul li a {
   background-size: 64px 64px;
   color: #FFF;
@@ -72,35 +73,42 @@ header nav ul li a {
   text-indent: -9999px;
   width: 64px;
 }
-/* line 68, ../sass/seven.scss */
+/* line 69, ../sass/seven.scss */
 header nav ul li a:hover {
   opacity: 0.6;
 }
-/* line 74, ../sass/seven.scss */
-header nav ul li .home > a {
+/* line 75, ../sass/seven.scss */
+header nav ul li.home > a {
   background: url(/img/icons/home.png) no-repeat 0 0;
 }
-/* line 78, ../sass/seven.scss */
-header nav ul li .pool > a {
+/* line 79, ../sass/seven.scss */
+header nav ul li.pool > a {
   background: url(/img/icons/cue-ball.png) no-repeat 0 0;
 }
-/* line 82, ../sass/seven.scss */
-header nav ul li .fifa > a {
+/* line 83, ../sass/seven.scss */
+header nav ul li.fifa > a {
   background: url(/img/icons/football.png) no-repeat 0 0;
 }
-/* line 86, ../sass/seven.scss */
-header nav ul li .users > a {
+/* line 87, ../sass/seven.scss */
+header nav ul li.users > a {
   background: url(/img/icons/user.png) no-repeat 0 0;
 }
+/* line 91, ../sass/seven.scss */
+header nav ul li ul {
+  display: inline-block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
 
-/* line 97, ../sass/seven.scss */
+/* line 105, ../sass/seven.scss */
 footer {
   background: rgba(0, 0, 0, 0.05);
   padding: 5em;
   text-align: center;
 }
 
-/* line 103, ../sass/seven.scss */
+/* line 111, ../sass/seven.scss */
 h1 {
   color: rgba(0, 0, 0, 0.1);
   font-weight: 900;
@@ -117,12 +125,12 @@ h1 {
   transition: letter-spacing 1s ease;
 }
 
-/* line 118, ../sass/seven.scss */
+/* line 126, ../sass/seven.scss */
 h1:hover {
   letter-spacing: -0.1em;
 }
 
-/* line 122, ../sass/seven.scss */
+/* line 130, ../sass/seven.scss */
 .cta {
   background: rgba(0, 0, 0, 0.5);
   color: #FFF;
@@ -137,29 +145,7 @@ h1:hover {
   transition: all 0.5s ease;
 }
 
-/* line 136, ../sass/seven.scss */
+/* line 144, ../sass/seven.scss */
 .cta:hover {
   padding: 0.5em 2em;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 143, ../sass/seven.scss */
-  .home {
-    background-image: url(/img/icons/home@2x.png);
-  }
-
-  /* line 146, ../sass/seven.scss */
-  .pool {
-    background-image: url(/img/icons/cue-ball@2x.png);
-  }
-
-  /* line 149, ../sass/seven.scss */
-  .fifa {
-    background-image: url(/img/icons/football@2x.png);
-  }
-
-  /* line 152, ../sass/seven.scss */
-  .users {
-    background-image: url(/img/icons/user@2x.png);
-  }
 }

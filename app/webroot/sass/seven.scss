@@ -56,6 +56,7 @@ header {
         float: left;
         margin: 0;
         padding: 0;
+        position: relative;
 
         a {
           background-size: 64px 64px;
@@ -71,20 +72,27 @@ header {
           
         }
 
-        .home > a {
+        &.home > a {
           background: url(/img/icons/home.png) no-repeat 0 0;
         }
 
-        .pool > a {
+        &.pool > a {
           background: url(/img/icons/cue-ball.png) no-repeat 0 0;
         }
 
-        .fifa > a {
+        &.fifa > a {
           background: url(/img/icons/football.png) no-repeat 0 0;
         }
 
-        .users > a {
+        &.users > a {
           background: url(/img/icons/user.png) no-repeat 0 0;
+        }
+        
+        ul {
+          display: inline-block;
+          position: absolute;
+          top: 70px;
+          left: 0;
         }
         
       }
@@ -139,17 +147,17 @@ h1:hover {
 
 
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .home {
-    background-image: url(/img/icons/home@2x.png);
-  }
-  .pool {
-    background-image: url(/img/icons/cue-ball@2x.png);
-  }
-  .fifa {
-    background-image: url(/img/icons/football@2x.png);
-  }
-  .users {
-    background-image: url(/img/icons/user@2x.png);
-  }
-}
+//@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+//  .home {
+//    background-image: url(/img/icons/home@2x.png);
+//  }
+//  .pool {
+//    background-image: url(/img/icons/cue-ball@2x.png);
+//  }
+//  .fifa {
+//    background-image: url(/img/icons/football@2x.png);
+//  }
+//  .users {
+//    background-image: url(/img/icons/user@2x.png);
+//  }
+//}
