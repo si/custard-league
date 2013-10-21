@@ -186,6 +186,30 @@ h1:hover {
   
 }
 
+.paging {
+
+  overflow: hidden;
+  text-transform: uppercase;
+  
+  .prev,
+  .next {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 1em;
+  }
+  .disabled {
+    color: rgba(0,0,0,0.3);
+  }
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
+  
+}
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 

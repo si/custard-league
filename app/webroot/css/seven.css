@@ -187,26 +187,51 @@ h1:hover {
   color: #000;
 }
 
+/* line 189, ../sass/seven.scss */
+.paging {
+  overflow: hidden;
+  text-transform: uppercase;
+}
+/* line 195, ../sass/seven.scss */
+.paging .prev,
+.paging .next {
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 1em;
+}
+/* line 200, ../sass/seven.scss */
+.paging .disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 203, ../sass/seven.scss */
+.paging .prev {
+  float: left;
+}
+/* line 207, ../sass/seven.scss */
+.paging .next {
+  float: right;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 192, ../sass/seven.scss */
+  /* line 216, ../sass/seven.scss */
   header nav ul li.home > a {
     background-image: url(/img/icons/home@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 196, ../sass/seven.scss */
+  /* line 220, ../sass/seven.scss */
   header nav ul li.pool > a {
     background-image: url(/img/icons/cue-ball@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 200, ../sass/seven.scss */
+  /* line 224, ../sass/seven.scss */
   header nav ul li.fifa > a {
     background-image: url(/img/icons/football@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 204, ../sass/seven.scss */
+  /* line 228, ../sass/seven.scss */
   header nav ul li.users > a {
     background-image: url(/img/icons/user@2x.png);
     background-size: 64px 64px;
