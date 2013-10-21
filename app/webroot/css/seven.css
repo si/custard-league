@@ -140,10 +140,10 @@ h1:hover {
   background: rgba(0, 0, 0, 0.5);
   color: #FFF;
   display: inline-block;
+  font-weight: bold;
   padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -152,29 +152,61 @@ h1:hover {
 
 /* line 149, ../sass/seven.scss */
 .cta:hover {
+  background: rgba(0, 0, 0, 0.8);
   padding: 0.5em 2em;
 }
 
+/* line 155, ../sass/seven.scss */
+.actions h3 {
+  float: left;
+  text-indent: -9999em;
+}
+/* line 159, ../sass/seven.scss */
+.actions ul {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 164, ../sass/seven.scss */
+.actions ul li {
+  display: inline-block;
+  float: left;
+}
+/* line 168, ../sass/seven.scss */
+.actions ul li a {
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+  display: block;
+  font-size: 0.8em;
+  padding: 0.5em;
+  margin: 0 1px 0 0;
+}
+/* line 176, ../sass/seven.scss */
+.actions ul li a:hover, .actions ul li a:focus {
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 157, ../sass/seven.scss */
+  /* line 192, ../sass/seven.scss */
   header nav ul li.home > a {
     background-image: url(/img/icons/home@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 161, ../sass/seven.scss */
+  /* line 196, ../sass/seven.scss */
   header nav ul li.pool > a {
     background-image: url(/img/icons/cue-ball@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 165, ../sass/seven.scss */
+  /* line 200, ../sass/seven.scss */
   header nav ul li.fifa > a {
     background-image: url(/img/icons/football@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 169, ../sass/seven.scss */
+  /* line 204, ../sass/seven.scss */
   header nav ul li.users > a {
     background-image: url(/img/icons/user@2x.png);
     background-size: 64px 64px;

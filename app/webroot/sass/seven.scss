@@ -136,10 +136,10 @@ h1:hover {
   background: rgba(0,0,0,0.5);
   color: #FFF;
   display: inline-block;
+  font-weight: bold;
   padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -147,9 +147,44 @@ h1:hover {
 }
 
 .cta:hover {
+  background: rgba(0,0,0,0.8);
   padding: 0.5em 2em;
 }
 
+.actions {
+  h3 {
+    float: left;
+    text-indent: -9999em;
+  }
+  ul {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      float: left;
+      
+      a {
+        background: rgba(0,0,0,0.05);
+        color: #666;
+        display: block;
+        font-size: 0.8em;
+        padding: 0.5em;
+        margin: 0 1px 0 0;
+
+        &:hover, &:focus {
+          background: rgba(0,0,0,0);
+          color: #000;
+        }
+        
+      }
+
+    }
+
+  }
+  
+}
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
