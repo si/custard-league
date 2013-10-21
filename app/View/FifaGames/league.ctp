@@ -1,7 +1,5 @@
 <h1>FIFA League</h1>
-<?php
-var_dump($all_matches);
-?>
+
 <table>
   <thead>
     <tr>
@@ -14,14 +12,14 @@ var_dump($all_matches);
     </tr>
   </thead>
   <tbody>
-    <?php foreach($league as $player) : ?>
+    <?php foreach($league as $player_id => $player) : ?>
     <tr>
-      <td><?php echo 'XXX'; ?></td>
-      <td><?php echo 0; ?></td>
-      <td><?php echo 0; ?></td>
-      <td><?php echo 0; ?></td>
-      <td><?php echo 0; ?></td>
-      <td><?php echo 0; ?></td>
+      <td><?php echo $this->Html->link($player['name'],array('controller'=>'users','action'=>'view',$player_id)); ?></td>
+      <td><?php echo $player['played']; ?></td>
+      <td><?php echo $player['wins']; ?></td>
+      <td><?php echo $player['draws']; ?></td>
+      <td><?php echo $player['losses']; ?></td>
+      <td><?php echo $player['points']; ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
