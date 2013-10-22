@@ -1,6 +1,11 @@
 <h1>FIFA League</h1>
 
 <table>
+  <colgroup>
+    <col class="player">
+    <col span="4" class="breakdown">
+    <col class="points">
+  </colgroup>
   <thead>
     <tr>
       <th>Player</th>
