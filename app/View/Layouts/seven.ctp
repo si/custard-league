@@ -35,7 +35,7 @@
 
 	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
 			 However, there is a blank style.css in the css directory should you prefer -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:800|Gentium+Book+Basic:400,400italic,700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Bangers|Open+Sans:800|Gentium+Book+Basic:400,400italic,700" rel="stylesheet">
 	<link rel="stylesheet" href="/css/seven.css" >
 
 	<script src="/js/libs/modernizr-2.6.2.min.js"></script>
