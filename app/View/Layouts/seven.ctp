@@ -75,7 +75,7 @@ echo $this->fetch('script');
                     <li><a href="/fifa_games/league">League</a></li>
                 </ul>
             </li>
-            <li class="users"><a href="#">Users</a>
+            <li class="users"><a href="/users/">Users</a>
                 <ul>
                     <li><a href="/users/">List</a></li>
                     <li><a href="/users/add">New User</a></li>
