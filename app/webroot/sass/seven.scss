@@ -9,6 +9,10 @@ body {
   
 }
 
+a {
+  color: fuchsia;
+}
+
 h1, h2, h3 {
   font-weight: normal;
 }
@@ -16,17 +20,37 @@ h1, h2, h3 {
 table {
   background: rgba(255,255,255,0.9);
   color: rgba(0,0,0,0.8);
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 50em;
 }
 
 thead {
+  font-size: 0.8em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.2);
 }
 
+tbody {
+  tr {
+    background: rgba(0,0,0,0.01);
+    border-bottom: 2px solid #FFF;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+    &:hover {
+      background: rgba(0,0,0,0.04);    
+    }
+  }
+}
+
 th, td {
-  padding: 0.25em 0.5em;
+  padding: 0.5em 0.5em;
   text-align: center;
 }
+
 th:first-child, td:first-child {
   text-align: left;
 }
@@ -38,10 +62,22 @@ header {
   padding: 1em;
   
   .logo {
+    color: #333;
     display: block;
     float: left; 
-    width: 100px;
+    font-family: 'Bangers',Arial;
     padding: 0.75em 0;
+    text-decoration: none;
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    width: 100px;
+  }
+  .logo:hover {
+    letter-spacing: 0.05em;
   }
 
   nav {
@@ -51,6 +87,7 @@ header {
     ul {
       margin: 0;
       padding: 0;
+      list-style: none;
       
       li {
         float: left;
@@ -72,6 +109,8 @@ header {
 
           &:hover {
             opacity: 0.6;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
           }
           
         }
@@ -108,6 +147,8 @@ header {
 }
 footer {
   background: rgba(0,0,0,0.05);
+  color: #999;
+  font-size: 0.7em;
   padding: 5em;
   text-align: center;
 }
@@ -210,7 +251,67 @@ h1:hover {
   
 }
 
+.avatar {
+	display: inline-block;
+	width: 150;
+	height: 150px;
+	border-radius: 50%;
+	padding: 3px;
+	border: 2px dashed #333;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	transition: 0.5s ease;
+  
+  &:hover {
+	  border: 2px dotted #333;
+    -webkit-transform: rotation(5deg);
+  }
+}
 
+
+/* Forms */
+
+/* FIFA Games */
+
+fieldset.player-1, 
+fieldset.player-2 {
+
+  background: #EEE;
+  border: 0;
+  float: left;
+  margin: 0 2.5%;
+  padding: 0;
+  width: 45%;
+
+  legend {
+    color: rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  
+  label {
+    color: rgba(0,0,0,0.4);
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+}
+fieldset.player-1 {
+  text-align: right;
+  
+  input, select {
+    text-align: right;
+  }
+}
+
+fieldset.other {
+  clear: left;
+}
+
+
+/* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
   header nav ul li.home > a {
