@@ -11,6 +11,14 @@ class User extends AppModel {
             'className'    => 'PoolGame',
             'foreignKey' => 'winner',
         ),
+        'PoolGamesPlayed' => array(
+            'className'    => 'PoolGame',
+            'foreignKey' => 'player_1',
+        ),
+        'FifaGamesPlayed' => array(
+            'className'    => 'FifaGame',
+            'foreignKey' => 'player_1',
+        ),
     );
 
     public $belongsTo = array(
