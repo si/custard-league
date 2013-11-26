@@ -6,7 +6,6 @@ class FifaGamesController extends AppController {
 	function index() {
 		$this->set('fifaGames', $this->FifaGame->find('all',
 			array(
-				'count'=>10,
 				'order'=>'FifaGame.created DESC'
 			)
 		));
@@ -67,6 +66,15 @@ class FifaGamesController extends AppController {
 		$this->set('league', $results);
 		$this->set('all_matches',$all_matches);
 
+	}
+	
+	function form($id='') {
+	
+	  $this->set('players', $this->FifaGame->Player1->find('list'));
+	  if($id!='') {
+  	  $this->data = $this->FifaGame->findById($id);
+	  }
+  	
 	}
 
 }
