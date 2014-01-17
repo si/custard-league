@@ -1,0 +1,1 @@
+<?php echo $this->element('pool_game_form'); ?>

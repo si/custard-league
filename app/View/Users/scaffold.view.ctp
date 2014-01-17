@@ -1,4 +1,4 @@
-<img src="/img/avatars/<?php echo $user['User']['avatar']; ?>" alt="" class="avatar">
+<img src="/img/avatars/<?php echo $user['User']['avatar']; ?>" alt="" class="avatar avatar-lg">
 <h1><?php echo $user['User']['first_name']; ?></h1>
 
 <h2><?php echo count($user['PoolGamesPlayed']); ?> pool games </h2>
