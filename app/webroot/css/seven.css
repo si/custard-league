@@ -110,8 +110,8 @@ header nav ul li a {
   text-indent: -9999px;
   transition: all 0.5s ease;
   width: 64px;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  -o-transition: -o-transform 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
 /* line 110, ../sass/seven.scss */
@@ -120,35 +120,54 @@ header nav ul li a:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
 }
-/* line 118, ../sass/seven.scss */
+/* line 116, ../sass/seven.scss */
+header nav ul li a:hover + ul {
+  display: block;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 120, ../sass/seven.scss */
+header nav ul li a:hover + ul a {
+  text-indent: 0;
+}
+/* line 128, ../sass/seven.scss */
 header nav ul li.home > a {
   background: url(/img/icons/home.png) no-repeat 0 0;
 }
-/* line 122, ../sass/seven.scss */
+/* line 132, ../sass/seven.scss */
 header nav ul li.pool > a {
   background: url(/img/icons/cue-ball.png) no-repeat 0 0;
 }
-/* line 126, ../sass/seven.scss */
+/* line 136, ../sass/seven.scss */
 header nav ul li.darts > a {
   background: url(/img/icons/darts.png) no-repeat 0 0;
 }
-/* line 130, ../sass/seven.scss */
+/* line 140, ../sass/seven.scss */
 header nav ul li.fifa > a {
   background: url(/img/icons/football.png) no-repeat 0 0;
 }
-/* line 134, ../sass/seven.scss */
+/* line 144, ../sass/seven.scss */
 header nav ul li.users > a {
   background: url(/img/icons/user.png) no-repeat 0 0;
 }
-/* line 138, ../sass/seven.scss */
+/* line 148, ../sass/seven.scss */
 header nav ul li ul {
   display: inline-block;
   position: absolute;
-  top: 70px;
+  top: 50px;
   left: 0;
 }
+/* line 154, ../sass/seven.scss */
+header nav ul li ul li {
+  display: inline-block;
+}
+/* line 157, ../sass/seven.scss */
+header nav ul li ul li a {
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 
-/* line 152, ../sass/seven.scss */
+/* line 173, ../sass/seven.scss */
 footer {
   background: rgba(0, 0, 0, 0.05);
   color: #999;
@@ -157,7 +176,7 @@ footer {
   text-align: center;
 }
 
-/* line 160, ../sass/seven.scss */
+/* line 181, ../sass/seven.scss */
 h1 {
   color: rgba(0, 0, 0, 0.1);
   font-weight: 900;
@@ -174,13 +193,13 @@ h1 {
   transition: all 1s ease;
 }
 
-/* line 175, ../sass/seven.scss */
+/* line 196, ../sass/seven.scss */
 h1:hover {
   letter-spacing: -0.1em;
   color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 180, ../sass/seven.scss */
+/* line 201, ../sass/seven.scss */
 .cta {
   background: rgba(0, 0, 0, 0.5);
   color: #FFF;
@@ -195,29 +214,29 @@ h1:hover {
   transition: all 0.5s ease;
 }
 
-/* line 194, ../sass/seven.scss */
+/* line 215, ../sass/seven.scss */
 .cta:hover {
   background: rgba(0, 0, 0, 0.8);
   padding: 0.5em 2em;
 }
 
-/* line 200, ../sass/seven.scss */
+/* line 221, ../sass/seven.scss */
 .actions h3 {
   float: left;
   text-indent: -9999em;
 }
-/* line 204, ../sass/seven.scss */
+/* line 225, ../sass/seven.scss */
 .actions ul {
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
-/* line 209, ../sass/seven.scss */
+/* line 230, ../sass/seven.scss */
 .actions ul li {
   display: inline-block;
   float: left;
 }
-/* line 213, ../sass/seven.scss */
+/* line 234, ../sass/seven.scss */
 .actions ul li a {
   background: rgba(0, 0, 0, 0.05);
   color: #666;
@@ -226,38 +245,38 @@ h1:hover {
   padding: 0.5em;
   margin: 0 1px 0 0;
 }
-/* line 221, ../sass/seven.scss */
+/* line 242, ../sass/seven.scss */
 .actions ul li a:hover, .actions ul li a:focus {
   background: rgba(0, 0, 0, 0);
   color: #000;
 }
 
-/* line 234, ../sass/seven.scss */
+/* line 255, ../sass/seven.scss */
 .paging {
   overflow: hidden;
   text-transform: uppercase;
 }
-/* line 240, ../sass/seven.scss */
+/* line 261, ../sass/seven.scss */
 .paging .prev,
 .paging .next {
   display: inline-block;
   font-size: 0.7em;
   padding: 1em;
 }
-/* line 245, ../sass/seven.scss */
+/* line 266, ../sass/seven.scss */
 .paging .disabled {
   color: rgba(0, 0, 0, 0.3);
 }
-/* line 248, ../sass/seven.scss */
+/* line 269, ../sass/seven.scss */
 .paging .prev {
   float: left;
 }
-/* line 252, ../sass/seven.scss */
+/* line 273, ../sass/seven.scss */
 .paging .next {
   float: right;
 }
 
-/* line 258, ../sass/seven.scss */
+/* line 279, ../sass/seven.scss */
 .avatar {
   display: inline-block;
   width: 50px;
@@ -267,12 +286,12 @@ h1:hover {
   -moz-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-/* line 267, ../sass/seven.scss */
+/* line 288, ../sass/seven.scss */
 .avatar.avatar-lg {
   width: 100px;
   height: 100px;
 }
-/* line 272, ../sass/seven.scss */
+/* line 293, ../sass/seven.scss */
 .avatar:hover {
   border: 2px dotted #333;
   -webkit-transform: rotation(5deg);
@@ -280,7 +299,7 @@ h1:hover {
 
 /* Forms */
 /* FIFA Games */
-/* line 284, ../sass/seven.scss */
+/* line 305, ../sass/seven.scss */
 fieldset.player-1,
 fieldset.player-2 {
   background: #EEE;
@@ -290,7 +309,7 @@ fieldset.player-2 {
   padding: 0;
   width: 45%;
 }
-/* line 293, ../sass/seven.scss */
+/* line 314, ../sass/seven.scss */
 fieldset.player-1 legend,
 fieldset.player-2 legend {
   color: rgba(0, 0, 0, 0.1);
@@ -298,7 +317,7 @@ fieldset.player-2 legend {
   font-size: 2em;
   text-transform: uppercase;
 }
-/* line 300, ../sass/seven.scss */
+/* line 321, ../sass/seven.scss */
 fieldset.player-1 label,
 fieldset.player-2 label {
   color: rgba(0, 0, 0, 0.4);
@@ -307,47 +326,47 @@ fieldset.player-2 label {
   font-weight: bold;
 }
 
-/* line 308, ../sass/seven.scss */
+/* line 329, ../sass/seven.scss */
 fieldset.player-1 {
   text-align: right;
 }
-/* line 311, ../sass/seven.scss */
+/* line 332, ../sass/seven.scss */
 fieldset.player-1 input, fieldset.player-1 select {
   text-align: right;
 }
 
-/* line 316, ../sass/seven.scss */
+/* line 337, ../sass/seven.scss */
 fieldset.other {
   clear: left;
 }
 
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 324, ../sass/seven.scss */
+  /* line 345, ../sass/seven.scss */
   header nav ul li.home > a {
     background-image: url(/img/icons/home@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 328, ../sass/seven.scss */
+  /* line 349, ../sass/seven.scss */
   header nav ul li.pool > a {
     background-image: url(/img/icons/cue-ball@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 332, ../sass/seven.scss */
+  /* line 353, ../sass/seven.scss */
   header nav ul li.darts > a {
     background-image: url(/img/icons/darts@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 336, ../sass/seven.scss */
+  /* line 357, ../sass/seven.scss */
   header nav ul li.fifa > a {
     background-image: url(/img/icons/football@2x.png);
     background-size: 64px 64px;
   }
 
-  /* line 340, ../sass/seven.scss */
+  /* line 361, ../sass/seven.scss */
   header nav ul li.users > a {
     background-image: url(/img/icons/user@2x.png);
     background-size: 64px 64px;

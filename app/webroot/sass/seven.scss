@@ -103,14 +103,24 @@ header {
           text-indent: -9999px;
           transition: all 0.5s ease;
           width: 64px;
-          -moz-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
+          -moz-transition: -moz-transform 0.5s ease;
+          -o-transition: -o-transform 0.5s ease;
           -webkit-transition: all 0.5s ease;
 
           &:hover {
             opacity: 0.6;
             transform: scale(1.1);
             -webkit-transform: scale(1.1);
+          }
+
+          &:hover + ul {
+            display: block;
+            background: rgba(0,0,0,0.8);
+
+            a {
+              text-indent: 0;
+            }
+
           }
           
         }
@@ -138,8 +148,19 @@ header {
         ul {
           display: inline-block;
           position: absolute;
-          top: 70px;
+          top: 50px;
           left: 0;
+          
+          li {
+            display: inline-block;
+            
+            a {
+              padding: 0.5em;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          }
+          
         }
         
       }
