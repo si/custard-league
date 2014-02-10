@@ -1,5 +1,5 @@
 <?php
-$this->set('title_for_layout', 'Pool Games');
+$this->set('title_for_layout', 'Dart Games');
 $this->pageTitle = 'Dart Games';
 ?>
 <h1>Dart Games</h1>

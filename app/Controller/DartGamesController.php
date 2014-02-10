@@ -23,7 +23,12 @@ class DartGamesController extends AppController {
 			'(SELECT COUNT(*) FROM dart_games WHERE player_1 = Winner.id OR player_2 = Winner.id) total_played',
 			'(COUNT(winner)/(SELECT COUNT(*) FROM dart_games WHERE player_1 = Winner.id OR player_2 = Winner.id)) win_ratio'
 		),
-		'group' => array(
+/*
+		'where' => array(
+		  'created > CURDATE()-14',
+		),
+
+*/		'group' => array(
 			'winner',
 		),
 		'order' => array(
