@@ -23,7 +23,12 @@ class PoolGamesController extends AppController {
 			'(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id) total_played',
 			'(COUNT(winner)/(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id)) win_ratio'
 		),
-		'group' => array(
+/*
+		'where' => array(
+		  'PoolGames.created > CURDATE()-14',
+		),
+
+*/		'group' => array(
 			'winner',
 		),
 		'order' => array(
