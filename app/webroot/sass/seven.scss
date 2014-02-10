@@ -253,14 +253,17 @@ h1:hover {
 
 .avatar {
 	display: inline-block;
-	width: 150;
-	height: 150px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
-	padding: 3px;
-	border: 2px dashed #333;
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
 	transition: 0.5s ease;
+  
+  &.avatar-lg {
+    width: 100px;
+    height: 100px;Í
+  }
   
   &:hover {
 	  border: 2px dotted #333;

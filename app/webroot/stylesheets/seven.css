@@ -1,0 +1,241 @@
+body {
+  background: #FFF;
+  color: #333;
+  font-family: 'HelveticaNeue-Light',Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: fuchsia; }
+
+h1, h2, h3 {
+  font-weight: normal; }
+
+table {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.8);
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 50em; }
+
+thead {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2); }
+
+tbody tr {
+  background: rgba(0, 0, 0, 0.01);
+  border-bottom: 2px solid #FFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  tbody tr:hover {
+    background: rgba(0, 0, 0, 0.04); }
+
+th, td {
+  padding: 0.5em 0.5em;
+  text-align: center; }
+
+th:first-child, td:first-child {
+  text-align: left; }
+
+header {
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1em; }
+  header .logo {
+    color: #333;
+    display: block;
+    float: left;
+    font-family: 'Bangers',Arial;
+    padding: 0.75em 0;
+    text-decoration: none;
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    width: 100px; }
+  header .logo:hover {
+    letter-spacing: 0.05em; }
+  header nav {
+    float: left; }
+    header nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      header nav ul li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        position: relative; }
+        header nav ul li a {
+          background-size: 64px 64px;
+          color: #FFF;
+          display: block;
+          height: 64px;
+          text-indent: -9999px;
+          transition: all 0.5s ease;
+          width: 64px;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
+          -webkit-transition: all 0.5s ease; }
+          header nav ul li a:hover {
+            opacity: 0.6;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1); }
+        header nav ul li.home > a {
+          background: url(/img/icons/home.png) no-repeat 0 0; }
+        header nav ul li.pool > a {
+          background: url(/img/icons/cue-ball.png) no-repeat 0 0; }
+        header nav ul li.fifa > a {
+          background: url(/img/icons/football.png) no-repeat 0 0; }
+        header nav ul li.users > a {
+          background: url(/img/icons/user.png) no-repeat 0 0; }
+        header nav ul li ul {
+          display: inline-block;
+          position: absolute;
+          top: 70px;
+          left: 0; }
+
+footer {
+  background: rgba(0, 0, 0, 0.05);
+  color: #999;
+  font-size: 0.7em;
+  padding: 5em;
+  text-align: center; }
+
+h1 {
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+  font-size: 8em;
+  letter-spacing: 0.1;
+  line-height: 0.8;
+  margin: 0 0 0.2em;
+  padding: 0;
+  text-align: justify;
+  text-transform: uppercase;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+
+h1:hover {
+  letter-spacing: -0.1em;
+  color: rgba(0, 0, 0, 0.2); }
+
+.cta {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.cta:hover {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5em 2em; }
+
+.actions h3 {
+  float: left;
+  text-indent: -9999em; }
+.actions ul {
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+  .actions ul li {
+    display: inline-block;
+    float: left; }
+    .actions ul li a {
+      background: rgba(0, 0, 0, 0.05);
+      color: #666;
+      display: block;
+      font-size: 0.8em;
+      padding: 0.5em;
+      margin: 0 1px 0 0; }
+      .actions ul li a:hover, .actions ul li a:focus {
+        background: rgba(0, 0, 0, 0);
+        color: #000; }
+
+.paging {
+  overflow: hidden;
+  text-transform: uppercase; }
+  .paging .prev,
+  .paging .next {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 1em; }
+  .paging .disabled {
+    color: rgba(0, 0, 0, 0.3); }
+  .paging .prev {
+    float: left; }
+  .paging .next {
+    float: right; }
+
+.avatar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  transition: 0.5s ease; }
+  .avatar:hover {
+    border: 2px dotted #333;
+    -webkit-transform: rotation(5deg); }
+
+/* Forms */
+/* FIFA Games */
+fieldset.player-1,
+fieldset.player-2 {
+  background: #EEE;
+  border: 0;
+  float: left;
+  margin: 0 2.5%;
+  padding: 0;
+  width: 45%; }
+  fieldset.player-1 legend,
+  fieldset.player-2 legend {
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase; }
+  fieldset.player-1 label,
+  fieldset.player-2 label {
+    color: rgba(0, 0, 0, 0.4);
+    display: block;
+    font-size: 0.8em;
+    font-weight: bold; }
+
+fieldset.player-1 {
+  text-align: right; }
+  fieldset.player-1 input, fieldset.player-1 select {
+    text-align: right; }
+
+fieldset.other {
+  clear: left; }
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  header nav ul li.home > a {
+    background-image: url(/img/icons/home@2x.png);
+    background-size: 64px 64px; }
+
+  header nav ul li.pool > a {
+    background-image: url(/img/icons/cue-ball@2x.png);
+    background-size: 64px 64px; }
+
+  header nav ul li.fifa > a {
+    background-image: url(/img/icons/football@2x.png);
+    background-size: 64px 64px; }
+
+  header nav ul li.users > a {
+    background-image: url(/img/icons/user@2x.png);
+    background-size: 64px 64px; } }
