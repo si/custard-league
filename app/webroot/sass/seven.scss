@@ -123,6 +123,10 @@ header {
           background: url(/img/icons/cue-ball.png) no-repeat 0 0;
         }
 
+        &.darts > a {
+          background: url(/img/icons/darts.png) no-repeat 0 0;
+        }
+
         &.fifa > a {
           background: url(/img/icons/football.png) no-repeat 0 0;
         }
@@ -262,7 +266,7 @@ h1:hover {
   
   &.avatar-lg {
     width: 100px;
-    height: 100px;Í
+    height: 100px;
   }
   
   &:hover {
@@ -323,6 +327,10 @@ fieldset.other {
   }
   header nav ul li.pool > a {
     background-image: url(/img/icons/cue-ball@2x.png);
+    background-size: 64px 64px;
+  }
+  header nav ul li.darts > a {
+    background-image: url(/img/icons/darts@2x.png);
     background-size: 64px 64px;
   }
   header nav ul li.fifa > a {

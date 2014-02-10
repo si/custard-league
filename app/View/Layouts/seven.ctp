@@ -60,15 +60,22 @@ echo $this->fetch('script');
         <ul class="menu">
             <li class="home"><a href="/">Home</a></li>
             <li class="pool">
-                <a href="/pool_games/">Pool League</a>
+                <a href="/pool_games/">Pool</a>
                 <ul>
                     <li><a href="/pool_games/">Dashboard</a></li>
                     <li><a href="/pool_games/add">New Game</a></li>
                     <li><a href="/pool_rules/">Rules</a></li>
                 </ul>
             </li>
+            <li class="darts">
+                <a href="/dart_games/">Darts</a>
+                <ul>
+                    <li><a href="/dart_games/">Dashboard</a></li>
+                    <li><a href="/dart_games/add">New Game</a></li>
+                </ul>
+            </li>
             <li class="fifa">
-                <a href="/fifa_games/">FIFA League</a>
+                <a href="/fifa_games/">FIFA</a>
                 <ul>
                     <li><a href="/fifa_games/add">New Game</a></li>
                     <li><a href="/fifa_games/">Latest</a></li>
