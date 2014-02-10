@@ -1,5 +1,5 @@
 <h1>Users</h1>
-
+<?php echo $this->Html->link('Add user',array('action'=>'add'),array('class'=>'cta')); ?>
 <table>
   <thead>
     <tr>
