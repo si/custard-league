@@ -1,3 +1,83 @@
+.user-scroll {
+
+  border: none;
+  display: inline-block;
+  height: 150px;
+  overflow: scroll;
+  overflow-y: auto;
+  padding: 0;
+  position: relative;
+  width: 47.5%;
+
+/*
+  legend {
+    margin-top: 1em;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+  }
+*/
+
+  div {
+    width: 250%;
+/*   white-space: nowrap; */
+
+  }  
+  label {
+    
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    white-space: auto;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+    &.is-selected {
+      background: rgba(255,120,0,0.5);
+    }
+    &:active {
+      background: rgba(255,120,0,0.9);
+    }
+    
+    input {
+      display: none;
+    }
+
+    img {
+      display:block;
+      width: 100px;
+    }
+    span {
+      background: rgba(0,0,0,0.8);
+      bottom: 0;
+      color: #FFF;
+      left: 0;
+      padding: 1em;
+      position: absolute;
+      opacity: 0;
+      right: 0;
+      text-align: center;
+      top: 0;
+      transition: all 1s ease;
+      -webkit-transform: scale(1.3);
+      -webkit-transition: all 0.3s ease;
+    }
+    
+    &:hover span {
+      opacity: 1;
+      -webkit-transform: scale(1);
+    }
+    
+  }
+  
+  
+}
+
+
+
 body {
 
   background: #FFF;

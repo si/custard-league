@@ -63,10 +63,13 @@ class PoolGamesController extends AppController {
 			$this->set('poolGame', $poolGame);
 		}
 		$this->set('players', $this->PoolGame->Player1->find('list'));
-		
-	}
-	
-	public function view($id='') {
+		$this->set('players_extra', $this->PoolGame->Player1->find('all',array(
+		  'fields'=>array('id','first_name','avatar')
+		  ,'conditions'=>array('disabled IS NULL')
+		)));
+  }
+  
+  public function view($id='') {
 
 		if($id!='') {
 			$poolGame = $this->PoolGame->findById($id);
