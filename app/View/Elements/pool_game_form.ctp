@@ -14,7 +14,7 @@ if(isset($poolGame)) echo $this->Form->input('id', $poolGame['PoolGame']['id']);
         name="player_1" 
         id="player_1_<?php echo $player['Player1']['id']; ?>" 
         value="<?php echo $player['Player1']['id']; ?>" />
-      <img src="/img/avatars/<?php echo $player['Player1']['avatar']; ?>" alt="" />
+      <img src="/img/avatars/<?php echo ($player['Player1']['avatar']!='') ? $player['Player1']['avatar'] : 'unknown.jpg'; ?>" alt="" />
       <span><?php echo $player['Player1']['first_name']; ?></span>
     </label>
   <?php endforeach; ?>
@@ -30,7 +30,7 @@ if(isset($poolGame)) echo $this->Form->input('id', $poolGame['PoolGame']['id']);
         name="player_2" 
         id="player_2_<?php echo $player['Player1']['id']; ?>" 
         value="<?php echo $player['Player1']['id']; ?>" />
-      <img src="/img/avatars/<?php echo $player['Player1']['avatar']; ?>" alt="" />
+      <img src="/img/avatars/<?php echo ($player['Player1']['avatar']!='') ? $player['Player1']['avatar'] : 'unknown.jpg'; ?>" alt="" />
       <span><?php echo $player['Player1']['first_name']; ?></span>
     </label>
   <?php endforeach; ?>
