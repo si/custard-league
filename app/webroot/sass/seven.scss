@@ -1,5 +1,6 @@
 .user-scroll {
 
+/*   background:-webkit-linear-gradient(#ffffff 0%, rgba(0,0,0,0.25) 100%); */
   border: none;
   display: inline-block;
   height: 150px;
@@ -7,7 +8,7 @@
   overflow-y: auto;
   padding: 0;
   position: relative;
-  width: 47.5%;
+  width: 45%;
 
 /*
   legend {
@@ -19,7 +20,7 @@
 */
 
   div {
-    width: 240%;
+    width: 220%;
   }  
   label {
     
@@ -33,9 +34,12 @@
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    z-index: 5;
     
     &.is-selected {
       background: rgba(255,120,0,0.5);
+      -webkit-transform: scale(1.3);
+      z-index: 10;
     }
     &:active {
       background: rgba(255,120,0,0.9);
