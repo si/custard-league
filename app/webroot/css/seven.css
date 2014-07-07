@@ -36,7 +36,6 @@ h1 {
 
 /* line 35, ../sass/seven/_core.scss */
 h1:hover {
-  letter-spacing: -0.1em;
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -308,7 +307,67 @@ footer {
   float: right;
 }
 
-/* line 1, ../sass/seven/_players.scss */
+@keyframes pulse {
+  /* line 3, ../sass/seven/_players.scss */
+  from {
+    -webkit-transform: scale(1);
+  }
+
+  /* line 7, ../sass/seven/_players.scss */
+  to {
+    -webkit-transform: scale(1.2);
+  }
+}
+
+/* line 14, ../sass/seven/_players.scss */
+.head-to-head h1 {
+  font-size: 3rem;
+  max-width: 60rem;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+/* line 20, ../sass/seven/_players.scss */
+.head-to-head h1 .player {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 40%;
+}
+/* line 28, ../sass/seven/_players.scss */
+.head-to-head h1 .player .avatar {
+  display: block;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+}
+/* line 35, ../sass/seven/_players.scss */
+.head-to-head h1 .player.winner {
+  color: rgba(255, 0, 204, 0.5);
+}
+/* line 38, ../sass/seven/_players.scss */
+.head-to-head h1 .player.winner .avatar {
+  animation-duration: 1s;
+  animation-name: pulse;
+}
+/* line 45, ../sass/seven/_players.scss */
+.head-to-head h1 .vs {
+  display: inline-block;
+  float: left;
+  font-size: 1.5rem;
+  margin: 5rem 0 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 20%;
+}
+/* line 57, ../sass/seven/_players.scss */
+.head-to-head .meta {
+  color: #666;
+  text-align: center;
+}
+
+/* line 64, ../sass/seven/_players.scss */
 .avatar {
   display: inline-block;
   width: 50px;
@@ -318,18 +377,18 @@ footer {
   -moz-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-/* line 10, ../sass/seven/_players.scss */
+/* line 73, ../sass/seven/_players.scss */
 .avatar.avatar-lg {
   width: 100px;
   height: 100px;
 }
-/* line 15, ../sass/seven/_players.scss */
+/* line 78, ../sass/seven/_players.scss */
 .avatar:hover {
   border: 2px dotted #333;
   -webkit-transform: rotation(5deg);
 }
 
-/* line 23, ../sass/seven/_players.scss */
+/* line 86, ../sass/seven/_players.scss */
 fieldset.player-1,
 fieldset.player-2 {
   background: #EEE;
@@ -339,7 +398,7 @@ fieldset.player-2 {
   padding: 0;
   width: 45%;
 }
-/* line 32, ../sass/seven/_players.scss */
+/* line 95, ../sass/seven/_players.scss */
 fieldset.player-1 legend,
 fieldset.player-2 legend {
   color: rgba(0, 0, 0, 0.1);
@@ -347,7 +406,7 @@ fieldset.player-2 legend {
   font-size: 2em;
   text-transform: uppercase;
 }
-/* line 39, ../sass/seven/_players.scss */
+/* line 102, ../sass/seven/_players.scss */
 fieldset.player-1 label,
 fieldset.player-2 label {
   color: rgba(0, 0, 0, 0.4);
@@ -356,16 +415,16 @@ fieldset.player-2 label {
   font-weight: bold;
 }
 
-/* line 47, ../sass/seven/_players.scss */
+/* line 110, ../sass/seven/_players.scss */
 fieldset.player-1 {
   text-align: right;
 }
-/* line 50, ../sass/seven/_players.scss */
+/* line 113, ../sass/seven/_players.scss */
 fieldset.player-1 input, fieldset.player-1 select {
   text-align: right;
 }
 
-/* line 55, ../sass/seven/_players.scss */
+/* line 118, ../sass/seven/_players.scss */
 fieldset.other {
   clear: left;
 }
