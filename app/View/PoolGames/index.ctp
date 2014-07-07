@@ -17,10 +17,12 @@ if (isset($rankings)) :
   	<?php 
   	  switch($view) {
         case 'month':
-          echo date('M Y');
+          echo date('F Y');
+          echo $this->Html->link('All time', array('action'=>'index'));
           break;
         default:
           echo 'All time';
+          echo $this->Html->link('This month', array('action'=>'index', 'month'));
           break;
       }
     ?>

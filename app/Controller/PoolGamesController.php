@@ -35,8 +35,12 @@ class PoolGamesController extends AppController {
           'Winner.first_name',
           'Winner.team_id',
           'COUNT(winner) wins',
-          '(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id) total_played',
-          '(COUNT(winner)/(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id)) win_ratio'
+          '(SELECT COUNT(*) FROM pool_games WHERE (player_1 = Winner.id OR player_2 = Winner.id)'
+          . ( (count($conditions)>0) ? ' AND ' . $conditions[0] . ' ' : '' ) .
+          ') total_played',
+          '( COUNT(winner) / (SELECT COUNT(*) FROM pool_games WHERE (player_1 = Winner.id OR player_2 = Winner.id)'
+          . ( (count($conditions)>0) ? ' AND ' . $conditions[0] . ' ' : '' ) .
+          ')) win_ratio'
         ),
 		'conditions' => $conditions,
     'group' => array(
