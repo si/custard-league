@@ -13,7 +13,18 @@ $this->pageTitle = 'Pool Games';
 if (isset($rankings)) : 
 ?>
 <section class="col-2" id="rankings">
-	<h2>Pool Rankings</h2>
+	<h2>Pool Rankings – 
+  	<?php 
+  	  switch($view) {
+        case 'month':
+          echo date('M Y');
+          break;
+        default:
+          echo 'All time';
+          break;
+      }
+    ?>
+	</h2>
 	<table>
 		<thead>
 			<tr>
