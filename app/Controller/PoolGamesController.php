@@ -1,6 +1,8 @@
 <?php
 class PoolGamesController extends AppController {
 
+  var $components = array('RequestHandler');
+  var $helpers = array('Text');
   var $scaffold;
 
   function beforeRender() {
@@ -11,9 +13,22 @@ class PoolGamesController extends AppController {
     parent::beforeFilter();
   }
 
-  public function index() {
+  public function index($view='') {
+  
+    if ($this->RequestHandler->isRss() ) {
+        $pool_games = $this->PoolGame->find(
+            'all',
+            array('limit' => 20, 'order' => 'PoolGame.created DESC')
+        );
+        return $this->set(compact('pool_games'));
+    }
+
+    $this->set('view',$view);
 
     $conditions = array();
+    if($view=='month') {
+      $conditions[] = "DATE_FORMAT(PoolGame.created, '%M %Y') = DATE_FORMAT(CURDATE(), '%M %Y')";
+    }
 
     $rankings = $this->PoolGame->find('all', array(
         'fields' => array(
@@ -23,12 +38,8 @@ class PoolGamesController extends AppController {
           '(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id) total_played',
           '(COUNT(winner)/(SELECT COUNT(*) FROM pool_games WHERE player_1 = Winner.id OR player_2 = Winner.id)) win_ratio'
         ),
-        /*
-		'where' => array(
-		  'PoolGames.created > CURDATE()-14',
-		),
-
-*/  'group' => array(
+		'conditions' => $conditions,
+    'group' => array(
           'winner',
         ),
         'order' => array(
@@ -60,10 +71,9 @@ class PoolGamesController extends AppController {
     }
 
     if($id!='') {
-      $conditions = array();
-      $conditions['id'] = $id;
-      $poolGame = $this->PoolGame->find('first', array('conditions'=>$conditions));
+      $poolGame = $this->PoolGame->findById($id);
       $this->set('poolGame', $poolGame);
+//      var_dump($poolGame);
     }
     $this->set('players', $this->PoolGame->Player1->find('list'));
     $this->set('players_extra', $this->PoolGame->Player1->find('all',array(
