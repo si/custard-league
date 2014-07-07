@@ -1,5 +1,5 @@
 <?php
-echo $this->Form->create('PoolGame');
+echo $this->Form->create();
 if(isset($poolGame)) echo $this->Form->input('id', $poolGame['PoolGame']['id']);
 ?>
 <fieldset>
@@ -13,7 +13,8 @@ if(isset($poolGame)) echo $this->Form->input('id', $poolGame['PoolGame']['id']);
       <input type="radio" 
         name="data[PoolGame][player_1]" 
         id="PoolGamePlayer1<?php echo $player['Player1']['id']; ?>" 
-        value="<?php echo $player['Player1']['id']; ?>" />
+        value="<?php echo $player['Player1']['id']; ?>"
+        <?php if(isset($this->data['PoolGame']) && $player['Player1']['id']==$this->data['PoolGame']['player_1']) echo 'checked="checked"'; ?> />
       <img src="/img/avatars/<?php echo ($player['Player1']['avatar']!='') ? $player['Player1']['avatar'] : 'unknown.jpg'; ?>" alt="" />
       <span><?php echo $player['Player1']['first_name']; ?></span>
     </label>
@@ -38,6 +39,8 @@ if(isset($poolGame)) echo $this->Form->input('id', $poolGame['PoolGame']['id']);
   </fieldset>
     
   <?php echo $this->Form->input('winner', array('options'=>array(1=>'Player 1',2=>'Player 2'), 'type' => 'radio')); ?>    
+
+  <?php echo $this->Form->input('created', array('type' => 'datetime','format'=> 'DMY', 'label'=>'When', 'class' =>'optional')); ?>
   
   <?php echo $this->Form->button('Save Game', array('class'=>'cta')); ?>
 
