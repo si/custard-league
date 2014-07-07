@@ -1,0 +1,38 @@
+body {
+
+  background: #FFF;
+  color: #333;
+  font-family: 'HelveticaNeue-Light',Helvetica,Arial,sans-serif;
+
+  margin: 0;
+  padding: 0;
+  
+}
+
+a {
+  color: fuchsia;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+h1 {
+  color: rgba(0,0,0,0.1);
+  font-weight: 900;
+  font-size: 8em;
+  letter-spacing: 0.1;
+  line-height: 0.8;
+  margin: 0 0 0.2em;
+  padding: 0;
+  text-align: justify;
+  text-transform: uppercase;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+h1:hover {
+  color: rgba(0,0,0,0.2);
+}
+

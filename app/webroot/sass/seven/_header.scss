@@ -1,0 +1,140 @@
+header {
+
+  background: rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 1em;
+  
+  .logo {
+    color: #333;
+    display: block;
+    float: left; 
+    font-family: 'Bangers',Arial;
+    padding: 0.75em 0;
+    text-decoration: none;
+    transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    width: 100px;
+  }
+  .logo:hover {
+    letter-spacing: 0.05em;
+  }
+
+  nav {
+  
+    float: left;
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        a {
+          background-size: 64px 64px;
+          color: #FFF;
+          display: block;
+          height: 64px;
+          text-indent: -9999px;
+          transition: all 0.5s ease;
+          width: 64px;
+          -moz-transition: -moz-transform 0.5s ease;
+          -o-transition: -o-transform 0.5s ease;
+          -webkit-transition: all 0.5s ease;
+
+          &:hover {
+            opacity: 0.6;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+          }
+
+          &:hover + ul {
+            display: block;
+            background: rgba(0,0,0,0.8);
+
+            a {
+              text-indent: 0;
+            }
+
+          }
+          
+        }
+
+        &.home > a {
+          background: url(/img/icons/home.png) no-repeat 0 0;
+        }
+
+        &.pool > a {
+          background: url(/img/icons/cue-ball.png) no-repeat 0 0;
+        }
+
+        &.darts > a {
+          background: url(/img/icons/darts.png) no-repeat 0 0;
+        }
+
+        &.fifa > a {
+          background: url(/img/icons/football.png) no-repeat 0 0;
+        }
+
+        &.users > a {
+          background: url(/img/icons/user.png) no-repeat 0 0;
+        }
+        
+        ul {
+          display: inline-block;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          
+          li {
+            display: inline-block;
+            
+            a {
+              padding: 0.5em;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+          }
+          
+        }
+        
+      }
+    
+    }
+  
+  }
+
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  header nav ul li.home > a {
+    background-image: url(/img/icons/home@2x.png);
+    background-size: 64px 64px;
+  }
+  header nav ul li.pool > a {
+    background-image: url(/img/icons/cue-ball@2x.png);
+    background-size: 64px 64px;
+  }
+  header nav ul li.darts > a {
+    background-image: url(/img/icons/darts@2x.png);
+    background-size: 64px 64px;
+  }
+  header nav ul li.fifa > a {
+    background-image: url(/img/icons/football@2x.png);
+    background-size: 64px 64px;
+  }
+  header nav ul li.users > a {
+    background-image: url(/img/icons/user@2x.png);
+    background-size: 64px 64px;
+  }
+}

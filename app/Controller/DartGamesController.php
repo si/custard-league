@@ -48,13 +48,28 @@ class DartGamesController extends AppController {
 
 	}
 
-/* 	public function view($id='') {
 
-		if($id!='') {
-			$dartGame = $this->DartGame->findById($id);
-			$this->set('dartGame', $dartGame);
-		}
+  public function form($id='') {
 
-	}
- */
+    if(isset($this->data['DartGame'])) {
+//      var_dump($this->data);
+      $data = $this->data;
+      $data['DartGame']['winner'] = $data['DartGame'][('player_' . $data['DartGame']['winner'])];
+//      echo 'Winner is ' . $data['DartGame']['winner'];
+      $this->DartGame->save($data);
+      $this->redirect( array('action'=>'view',$this->DartGame->id) );
+    }
+
+    if($id!='') {
+      $DartGame = $this->DartGame->findById($id);
+      $this->set('DartGame', $DartGame);
+//      var_dump($DartGame);
+    }
+    $this->set('players', $this->DartGame->Player1->find('list'));
+    $this->set('players_extra', $this->DartGame->Player1->find('all',array(
+          'fields'=>array('id','first_name','avatar')
+          ,'conditions'=>array('disabled IS NULL')
+        )));
+  }
+
 }

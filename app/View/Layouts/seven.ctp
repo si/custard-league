@@ -110,7 +110,9 @@ echo $this->fetch('script');
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 
-    <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/libs/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/js/libs/knockout-3.0.0.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
 
   </body>
 </html>

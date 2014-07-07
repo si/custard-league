@@ -1,0 +1,38 @@
+table {
+  background: rgba(255,255,255,0.9);
+  color: rgba(0,0,0,0.8);
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 50em;
+}
+
+thead {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.2);
+}
+
+tbody {
+  tr {
+    background: rgba(0,0,0,0.01);
+    border-bottom: 2px solid #FFF;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+    &:hover {
+      background: rgba(0,0,0,0.04);    
+    }
+  }
+}
+
+th, td {
+  padding: 0.5em 0.5em;
+  text-align: center;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+
