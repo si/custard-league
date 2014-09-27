@@ -100,7 +100,7 @@ echo $this->fetch('script');
 
     <footer>
 
-        <p>Built in-house by ASOS Birmingham</p>
+        <p>Built in-house by <a href="http://twitter.com/Si">Si</a> and ASOS Birmingham</p>
         
     </footer>
 
