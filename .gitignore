@@ -3,3 +3,5 @@ app/tmp
 app/.sass-cache
 
 app/webroot/.sass-cache
+
+.DS_Store

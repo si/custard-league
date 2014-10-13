@@ -14,7 +14,7 @@ class FifaGamesController extends AppController {
 
 	function league() {
 
-    $league = $results = array();
+    	$league = $results = array();
 		$schema = array('name'=>'','played'=>0,'wins'=>0,'draws'=>0,'losses'=>0,'points'=>0 );
 
 		$players = $this->FifaGame->Player1->find('list');
@@ -28,7 +28,7 @@ class FifaGamesController extends AppController {
 		// Get all matches
 		$all_matches = $this->FifaGame->find('all');
 
-    // Populate wins, draws and losses
+   		// Populate wins, draws and losses
 		foreach($all_matches as $match) {
       
       $results[ $match['FifaGame']['player_1'] ]['played'] ++;
