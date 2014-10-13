@@ -4,10 +4,8 @@ $this->pageTitle = 'FIFA Games';
 ?>
 <h1>FIFA Games</h1>
 <?php
-//var_dump($poolGames);
+echo $this->element('fifa_games_actions');
 ?>
-
-<?php echo $this->Html->link('New Game',array('action'=>'add'),array('class'=>'cta')); ?>
 
 <?php if (isset($fifaGames)) : ?>
 <section class="col-2" id="history">
@@ -42,36 +40,3 @@ $this->pageTitle = 'FIFA Games';
 	</table>
 </section>
 <?php endif; ?>
-<?php
-if (isset($rankings)) : 
-?>
-<section class="col-2" id="rankings">
-	<h2>Pool Rankings</h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Position</th>
-				<th>Player</th>
-				<th>Score</th>
-			</tr>
-		</thead>
-		<tbody>
-		<?php
-		foreach($rankings as $index=>$game) :
-		?>
-			<tr>
-				<td class="position"><?php echo $index+1; ?></td>
-				<td class="team-<?php echo $game['Winner']['team_id']; ?>"><?php echo $game['Winner']['first_name']; ?></td>
-				<td class="score">
-				  <strong><?php echo $this->Number->toPercentage($game[0]['win_ratio']*100,1); ?></strong>
-				  <small>(<?php echo $game[0]['wins'] . '/' . $game[0]['total_played']; ?>)</small>
-				</td>
-			</tr>
-		<?php
-		endforeach;
-		?>
-		</tbody>
-	</table>
-</section>
-<?php endif; ?>
-

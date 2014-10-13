@@ -1,5 +1,9 @@
 <h1>FIFA League</h1>
 
+<?php
+echo $this->element('fifa_games_actions');
+?>
+
 <table>
   <colgroup>
     <col class="player">
