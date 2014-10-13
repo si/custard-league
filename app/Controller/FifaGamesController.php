@@ -4,9 +4,13 @@ class FifaGamesController extends AppController {
 	var $scaffold;
 
 	function index() {
+		$limit = 10;
+		$this->set('limit', $limit);
+		
 		$this->set('fifaGames', $this->FifaGame->find('all',
 			array(
-				'order'=>'FifaGame.created DESC'
+				'order'=>'FifaGame.created DESC',
+				'limit'=>$limit
 			)
 		));
 
