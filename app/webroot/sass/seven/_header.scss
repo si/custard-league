@@ -25,7 +25,11 @@ header {
 
   nav {
   
-    float: left;
+    float: right;
+    width: auto;
+
+    @media only screen and (max-width: 480px) {
+    }
     
     ul {
       margin: 0;
@@ -46,11 +50,12 @@ header {
           text-indent: -9999px;
           transition: all 0.5s ease;
           width: 64px;
-          -moz-transition: -moz-transform 0.5s ease;
-          -o-transition: -o-transform 0.5s ease;
+          -moz-transition: all 0.5s ease;
+          -o-transition: all 0.5s ease;
           -webkit-transition: all 0.5s ease;
 
           &:hover {
+            background: rgba(#000,0.3);
             opacity: 0.6;
             transform: scale(1.1);
             -webkit-transform: scale(1.1);
@@ -58,34 +63,53 @@ header {
 
           &:hover + ul {
             display: block;
-            background: rgba(0,0,0,0.8);
-
-            a {
-              text-indent: 0;
-            }
-
           }
           
         }
 
         &.home > a {
           background: url(/img/icons/home.png) no-repeat 0 0;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(/img/icons/home@2x.png);
+            background-size: 64px 64px;
+          }
         }
 
         &.pool > a {
           background: url(/img/icons/cue-ball.png) no-repeat 0 0;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(/img/icons/cue-ball@2x.png);
+            background-size: 64px 64px;
+          }
         }
 
         &.darts > a {
           background: url(/img/icons/darts.png) no-repeat 0 0;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(/img/icons/darts@2x.png);
+            background-size: 64px 64px;
+          }
         }
 
         &.fifa > a {
           background: url(/img/icons/football.png) no-repeat 0 0;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(/img/icons/football@2x.png);
+            background-size: 64px 64px;
+          }
         }
 
         &.users > a {
           background: url(/img/icons/user.png) no-repeat 0 0;
+
+          @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(/img/icons/user@2x.png);
+            background-size: 64px 64px;
+          }
         }
         
         ul {
@@ -103,38 +127,8 @@ header {
               text-transform: uppercase;
             }
           }
-          
         }
-        
       }
-    
     }
-  
-  }
-
-}
-
-/* Retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-
-  header nav ul li.home > a {
-    background-image: url(/img/icons/home@2x.png);
-    background-size: 64px 64px;
-  }
-  header nav ul li.pool > a {
-    background-image: url(/img/icons/cue-ball@2x.png);
-    background-size: 64px 64px;
-  }
-  header nav ul li.darts > a {
-    background-image: url(/img/icons/darts@2x.png);
-    background-size: 64px 64px;
-  }
-  header nav ul li.fifa > a {
-    background-image: url(/img/icons/football@2x.png);
-    background-size: 64px 64px;
-  }
-  header nav ul li.users > a {
-    background-image: url(/img/icons/user@2x.png);
-    background-size: 64px 64px;
   }
 }

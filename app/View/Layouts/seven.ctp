@@ -58,7 +58,6 @@ echo $this->fetch('script');
 
         <nav>
         <ul class="menu">
-            <li class="home"><a href="/">Home</a></li>
             <li class="pool">
                 <a href="/pool_games/">Pool</a>
                 <ul>

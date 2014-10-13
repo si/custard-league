@@ -104,27 +104,34 @@ header .logo {
 }
 /* line 22, ../sass/seven/_header.scss */
 header .logo:hover {
+  color: #FC0;
   letter-spacing: 0.05em;
 }
-/* line 26, ../sass/seven/_header.scss */
+/* line 27, ../sass/seven/_header.scss */
 header nav {
   float: right;
   width: auto;
 }
-/* line 34, ../sass/seven/_header.scss */
+@media only screen and (min-width: 320px) {
+  /* line 27, ../sass/seven/_header.scss */
+  header nav {
+    background: red;
+  }
+}
+/* line 36, ../sass/seven/_header.scss */
 header nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 39, ../sass/seven/_header.scss */
+/* line 41, ../sass/seven/_header.scss */
 header nav ul li {
   float: left;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 45, ../sass/seven/_header.scss */
+/* line 47, ../sass/seven/_header.scss */
 header nav ul li a {
   background-size: 64px 64px;
   color: #FFF;
@@ -137,84 +144,85 @@ header nav ul li a {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
-/* line 57, ../sass/seven/_header.scss */
+/* line 59, ../sass/seven/_header.scss */
 header nav ul li a:hover {
   background: rgba(0, 0, 0, 0.3);
   opacity: 0.6;
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
 }
-/* line 64, ../sass/seven/_header.scss */
+/* line 66, ../sass/seven/_header.scss */
 header nav ul li a:hover + ul {
   display: block;
+  background: rgba(0, 0, 0, 0.8);
 }
-/* line 70, ../sass/seven/_header.scss */
+/* line 73, ../sass/seven/_header.scss */
 header nav ul li.home > a {
   background: url(/img/icons/home.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 70, ../sass/seven/_header.scss */
+  /* line 73, ../sass/seven/_header.scss */
   header nav ul li.home > a {
     background-image: url(/img/icons/home@2x.png);
     background-size: 64px 64px;
   }
 }
-/* line 79, ../sass/seven/_header.scss */
+/* line 82, ../sass/seven/_header.scss */
 header nav ul li.pool > a {
   background: url(/img/icons/cue-ball.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 79, ../sass/seven/_header.scss */
+  /* line 82, ../sass/seven/_header.scss */
   header nav ul li.pool > a {
     background-image: url(/img/icons/cue-ball@2x.png);
     background-size: 64px 64px;
   }
 }
-/* line 88, ../sass/seven/_header.scss */
+/* line 91, ../sass/seven/_header.scss */
 header nav ul li.darts > a {
   background: url(/img/icons/darts.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 88, ../sass/seven/_header.scss */
+  /* line 91, ../sass/seven/_header.scss */
   header nav ul li.darts > a {
     background-image: url(/img/icons/darts@2x.png);
     background-size: 64px 64px;
   }
 }
-/* line 97, ../sass/seven/_header.scss */
+/* line 100, ../sass/seven/_header.scss */
 header nav ul li.fifa > a {
   background: url(/img/icons/football.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 97, ../sass/seven/_header.scss */
+  /* line 100, ../sass/seven/_header.scss */
   header nav ul li.fifa > a {
     background-image: url(/img/icons/football@2x.png);
     background-size: 64px 64px;
   }
 }
-/* line 106, ../sass/seven/_header.scss */
+/* line 109, ../sass/seven/_header.scss */
 header nav ul li.users > a {
   background: url(/img/icons/user.png) no-repeat 0 0;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 106, ../sass/seven/_header.scss */
+  /* line 109, ../sass/seven/_header.scss */
   header nav ul li.users > a {
     background-image: url(/img/icons/user@2x.png);
     background-size: 64px 64px;
   }
 }
-/* line 115, ../sass/seven/_header.scss */
+/* line 118, ../sass/seven/_header.scss */
 header nav ul li ul {
   display: inline-block;
   position: absolute;
   top: 50px;
   left: 0;
 }
-/* line 121, ../sass/seven/_header.scss */
+/* line 124, ../sass/seven/_header.scss */
 header nav ul li ul li {
   display: inline-block;
 }
-/* line 124, ../sass/seven/_header.scss */
+/* line 127, ../sass/seven/_header.scss */
 header nav ul li ul li a {
   padding: 0.5em;
   text-decoration: none;
