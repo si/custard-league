@@ -12,6 +12,7 @@
 <?php endif; ?>
 
 <ul class="actions">
+<li><?php echo $this->Html->link('Edit Game',array('action'=>'edit', $fifaGame['FifaGame']['id'])); ?></li>
 <li><?php echo $this->Html->link('Recent Games',array('action'=>'index')); ?></li>
 <li><?php echo $this->Html->link('FIFA League',array('action'=>'league')); ?></li>
 </ul>
