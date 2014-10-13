@@ -8,6 +8,7 @@
   </colgroup>
   <thead>
     <tr>
+      <th>Position</th>
       <th>Player</th>
       <th>Played</th>
       <th>Won</th>
@@ -17,9 +18,10 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach($league as $player_id => $player) : ?>
+    <?php foreach($league as $counter => $player) : ?>
     <tr>
-      <td><?php echo $this->Html->link($player['name'],array('controller'=>'users','action'=>'view',$player_id)); ?></td>
+      <td><?php echo $counter+1; ?></td>
+      <td><?php echo $player['name']; ?></td>
       <td><?php echo $player['played']; ?></td>
       <td><?php echo $player['wins']; ?></td>
       <td><?php echo $player['draws']; ?></td>
