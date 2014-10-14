@@ -4,4 +4,6 @@ app/.sass-cache
 
 app/webroot/.sass-cache
 
+vendor
+
 .DS_Store

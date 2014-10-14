@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": ">=1.0.0",
+	    "mashape/unirest-php" : "dev-master"
+    },
+	"autoload": {
+		"psr-0": {"Unirest": "lib/"}
+	}
+}
