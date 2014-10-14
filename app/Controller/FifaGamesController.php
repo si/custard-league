@@ -74,11 +74,17 @@ class FifaGamesController extends AppController {
 	
 	function form($id='') {
 	
-	  $this->set('players', $this->FifaGame->Player1->find('list'));
-	  if($id!='') {
-  	  $this->data = $this->FifaGame->findById($id);
-	  }
-  	
+		$this->set('players', $this->FifaGame->Player1->find('list'));
+		
+		if($id!='') {
+		  	$this->data = $this->FifaGame->findById($id);
+		}
+
+		if(isset($this->data['FifaGame'])) {
+		  $this->FifaGame->save($this->data);
+		  $this->redirect( array('action'=>'view',$this->FifaGame->id) );
+		}
+ 	
 	}
 
 }
