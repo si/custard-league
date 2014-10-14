@@ -1,4 +1,8 @@
 <?php
+$this->set('title_for_layout', 'New FIFA Game');
+?>
+<h1>New Game</h1>
+<?php
   echo $this->Form->create('FifaGame');
 ?>
   <fieldset class="player-1">
@@ -27,7 +31,7 @@
     
   </fieldset>
   
-  <?php echo $this->Form->button('Save'); ?>
+  <?php echo $this->Form->button('Save', array('class'=>'cta')); ?>
   <?php echo $this->Html->link('Cancel',array('action'=>'index')); ?>
 
 <?php
