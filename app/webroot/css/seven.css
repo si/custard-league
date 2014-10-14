@@ -1,4 +1,9 @@
 /* line 1, ../sass/seven/_core.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 3, ../sass/seven/_core.scss */
 body {
   background: #FFF;
   color: #333;
@@ -7,24 +12,24 @@ body {
   padding: 0;
 }
 
-/* line 12, ../sass/seven/_core.scss */
+/* line 14, ../sass/seven/_core.scss */
 a {
   color: fuchsia;
 }
 
-/* line 16, ../sass/seven/_core.scss */
+/* line 18, ../sass/seven/_core.scss */
 h1, h2, h3 {
   font-weight: normal;
 }
 
-/* line 20, ../sass/seven/_core.scss */
+/* line 22, ../sass/seven/_core.scss */
 h1 {
   color: rgba(0, 0, 0, 0.1);
   font-weight: 900;
-  font-size: 8em;
+  font-size: 5em;
   letter-spacing: 0.1;
   line-height: 0.8;
-  margin: 0 0 0.2em;
+  margin: 0.3em 0;
   padding: 0;
   text-align: justify;
   text-transform: uppercase;
@@ -33,8 +38,7 @@ h1 {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-
-/* line 35, ../sass/seven/_core.scss */
+/* line 37, ../sass/seven/_core.scss */
 h1:hover {
   color: rgba(0, 0, 0, 0.2);
 }
@@ -74,10 +78,25 @@ th, td {
   padding: 0.5em 0.5em;
   text-align: center;
 }
-
-/* line 35, ../sass/seven/_tables.scss */
+/* line 34, ../sass/seven/_tables.scss */
 th:first-child, td:first-child {
   text-align: left;
+}
+/* line 38, ../sass/seven/_tables.scss */
+th:last-child, td:last-child {
+  text-align: right;
+}
+/* line 43, ../sass/seven/_tables.scss */
+th:nth-child(2n),
+th .score, td:nth-child(2n),
+td .score {
+  background: rgba(0, 255, 0, 0.1);
+}
+/* line 46, ../sass/seven/_tables.scss */
+th:nth-child(2n) a,
+th .score a, td:nth-child(2n) a,
+td .score a {
+  color: #222;
 }
 
 /* line 1, ../sass/seven/_header.scss */
@@ -233,8 +252,11 @@ footer {
 /* line 1, ../sass/seven/_cta.scss */
 .cta {
   background: rgba(0, 0, 0, 0.5);
+  border: none;
   color: #FFF;
   display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: bold;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -244,65 +266,69 @@ footer {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-
-/* line 15, ../sass/seven/_cta.scss */
+/* line 17, ../sass/seven/_cta.scss */
 .cta:hover {
   background: rgba(0, 0, 0, 0.8);
-  padding: 0.5em 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
-/* line 21, ../sass/seven/_cta.scss */
+/* line 28, ../sass/seven/_cta.scss */
 .actions h3 {
   float: left;
   text-indent: -9999em;
 }
-/* line 25, ../sass/seven/_cta.scss */
+/* line 32, ../sass/seven/_cta.scss */
 .actions ul {
-  margin: 0;
+  margin: 0 0 1rem;
   overflow: hidden;
   padding: 0;
 }
-/* line 30, ../sass/seven/_cta.scss */
+/* line 37, ../sass/seven/_cta.scss */
 .actions ul li {
   display: inline-block;
   float: left;
 }
-/* line 34, ../sass/seven/_cta.scss */
+/* line 41, ../sass/seven/_cta.scss */
 .actions ul li a {
   background: rgba(0, 0, 0, 0.05);
   color: #666;
   display: block;
   font-size: 0.8em;
-  padding: 0.5em;
+  padding: 1em;
   margin: 0 1px 0 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-/* line 42, ../sass/seven/_cta.scss */
+/* line 53, ../sass/seven/_cta.scss */
 .actions ul li a:hover, .actions ul li a:focus {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.3);
   color: #000;
 }
 
-/* line 55, ../sass/seven/_cta.scss */
+/* line 66, ../sass/seven/_cta.scss */
 .paging {
   overflow: hidden;
   text-transform: uppercase;
 }
-/* line 60, ../sass/seven/_cta.scss */
+/* line 72, ../sass/seven/_cta.scss */
 .paging .prev,
 .paging .next {
   display: inline-block;
   font-size: 0.7em;
   padding: 1em;
 }
-/* line 66, ../sass/seven/_cta.scss */
+/* line 77, ../sass/seven/_cta.scss */
 .paging .disabled {
   color: rgba(0, 0, 0, 0.3);
 }
-/* line 69, ../sass/seven/_cta.scss */
+/* line 80, ../sass/seven/_cta.scss */
 .paging .prev {
   float: left;
 }
-/* line 73, ../sass/seven/_cta.scss */
+/* line 84, ../sass/seven/_cta.scss */
 .paging .next {
   float: right;
 }
@@ -318,6 +344,7 @@ footer {
     -webkit-transform: scale(1.2);
   }
 }
+
 /* line 14, ../sass/seven/_players.scss */
 .head-to-head h1 {
   font-size: 3rem;
@@ -387,14 +414,14 @@ footer {
   -webkit-transform: rotation(5deg);
 }
 
-/* line 85, ../sass/seven/_players.scss */
+/* line 86, ../sass/seven/_players.scss */
 fieldset.player-1,
 fieldset.player-2 {
   background: #EEE;
   border: 0;
   float: left;
   margin: 0 2.5%;
-  padding: 0;
+  padding: 1em;
   width: 45%;
 }
 /* line 95, ../sass/seven/_players.scss */
@@ -412,20 +439,31 @@ fieldset.player-2 label {
   display: block;
   font-size: 0.8em;
   font-weight: bold;
+  margin: 1em 0 0;
 }
 
-/* line 110, ../sass/seven/_players.scss */
+/* line 111, ../sass/seven/_players.scss */
 fieldset.player-1 {
   text-align: right;
 }
-/* line 113, ../sass/seven/_players.scss */
+/* line 114, ../sass/seven/_players.scss */
 fieldset.player-1 input, fieldset.player-1 select {
   text-align: right;
 }
 
-/* line 118, ../sass/seven/_players.scss */
+/* line 119, ../sass/seven/_players.scss */
 fieldset.other {
   clear: left;
+  background: rgba(238, 238, 238, 0.6);
+  border: none;
+}
+/* line 124, ../sass/seven/_players.scss */
+fieldset.other legend {
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* line 1, ../sass/seven/_user-scroll.scss */

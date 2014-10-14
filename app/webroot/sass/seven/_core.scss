@@ -1,3 +1,5 @@
+* { box-sizing: border-box }
+
 body {
 
   background: #FFF;
@@ -20,10 +22,10 @@ h1, h2, h3 {
 h1 {
   color: rgba(0,0,0,0.1);
   font-weight: 900;
-  font-size: 8em;
+  font-size: 5em;
   letter-spacing: 0.1;
   line-height: 0.8;
-  margin: 0 0 0.2em;
+  margin: 0.3em 0;
   padding: 0;
   text-align: justify;
   text-transform: uppercase;
@@ -31,8 +33,9 @@ h1 {
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-}
-h1:hover {
-  color: rgba(0,0,0,0.2);
+  
+  &:hover {
+    color: rgba(0,0,0,0.2);
+  }
 }
 
