@@ -30,7 +30,7 @@ echo $this->element('fifa_games_actions');
       <td><?php echo $player['wins']; ?></td>
       <td><?php echo $player['draws']; ?></td>
       <td><?php echo $player['losses']; ?></td>
-      <td><?php echo $player['points']; ?></td>
+      <td class="score"><?php echo $player['points']; ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

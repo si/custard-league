@@ -27,7 +27,7 @@ $this->pageTitle = 'FIFA Games';
 			<tr>
 				<td><?php echo $game['Player1']['first_name']; ?><br>
 					<small>(<?php echo $game['FifaGame']['player_1_team']; ?>)</small></td>
-				<td>
+				<td class="score">
 					<?php echo $game['FifaGame']['player_1_score'] . '-' . $game['FifaGame']['player_2_score']; ?><br>
 					<small><?php echo $this->Html->link($this->Time->niceShort($game['FifaGame']['created']),array('action'=>'view',$game['FifaGame']['id'])); ?></small>
 				</td>
